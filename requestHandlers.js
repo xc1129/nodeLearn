@@ -24,13 +24,13 @@ function start(response) {
         response.end();
     });
     */
-    
+    /*
     exec("ls -lah", function (error, stdout, stderr) {
         response.writeHead(200, {"Content-Type": "text/plain"});
         response.write(stdout);
         response.end();
     });
-    
+    */
     
     /*
     function sleep(milliSeconds) {
