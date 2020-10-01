@@ -3,6 +3,7 @@ var querystring = require("querystring"),
     fs = require("fs"),
     formidable = require("formidable");
 const { request } = require("http");
+var myquery = require("./dbconn");
 
 function start(response) {
     console.log("Request handler 'start' was called.");
@@ -20,7 +21,8 @@ function start(response) {
 
     response.writeHead(200, {"Content-Type": "text/html"});
     response.write(body);
-    console.log("show page end. ")
+    console.log("show page end. ");
+    console.log("super222");
     response.end();
 
     /*
@@ -79,6 +81,12 @@ function show(response) {
     });
 }
 
+function query(response) {
+    console.log("Request handle 'query' wasa called.");
+    myquery.myquery(response);
+}
+
 exports.start = start;
 exports.upload = upload;
 exports.show = show;
+exports.query = query;
