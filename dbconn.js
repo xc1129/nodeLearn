@@ -2,11 +2,11 @@ var mysqlconn  = require('mysql');
  
 function myquery(response) {
     var connection = mysqlconn.createConnection({     
-        host     : 'localhost',       
-        user     : 'root',              
+        host     : '104.243.19.179',       
+        user     : 'nodejs',              
         password : 'mysqlpsd',       
         port: '3306',                   
-        database: 'testnode' 
+        database: 'testNode' 
       }); 
       
       connection.connect();
